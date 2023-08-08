@@ -2,6 +2,7 @@ import { ThemeProvider } from '@/components/ThemeProvider'
 import './globals.css'
 import type { Metadata } from 'next'
 import { Mukta } from 'next/font/google'
+import { Navbar } from '@/components/Navbar'
 
 const font = Mukta({ weight: "400", subsets: ["latin"] })
 
@@ -19,6 +20,7 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning>
       <body className={font.className}>
       <ThemeProvider attribute="class" defaultTheme="dark" enableSystem>
+        <Navbar />
         {children}
       </ThemeProvider>
       </body>
