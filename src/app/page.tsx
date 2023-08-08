@@ -32,13 +32,13 @@ export default function Article() {
           {articles.map(article => (
             <Link href={'/' + article.slug} passHref key={article.slug}>
               <div className='py-2 flex justify-between align-middle gap-2'>
-                  <div>
-                      <h3 className="text-lg font-bold">{article.meta.title}</h3>
-                      <p className="text-gray-400">{article.meta.description}</p>
-                  </div>
-                  <div className="my-auto text-gray-400">
-                      <p>{article.meta.date}</p>
-                  </div>
+                <div>
+                  <h3 className="text-lg font-bold">{article.meta.title}</h3>
+                  <p className="text-gray-400 truncate w-52 lg:w-96">{article.meta.description}</p>
+                </div>
+                <div className="my-auto text-gray-400">
+                  <p>{article.meta.date}</p>
+                </div>
               </div>
             </Link>
           ))}
