@@ -15,7 +15,7 @@ import { useTheme } from "next-themes";
 import { useEffect, useState } from "react";
 
 const navigationItems = [
-  { label: 'Articles', href: '/articles' },
+  { label: 'Articles', href: '/' },
   { label: 'About me', href: '/about' },
 ];
 
