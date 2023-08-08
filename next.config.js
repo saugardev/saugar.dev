@@ -8,4 +8,4 @@ const nextConfig = {
   reactStrictMode: true,
 }
  
-module.exports = withMDX(nextConfig)
+module.exports = {}
