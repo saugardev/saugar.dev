@@ -25,10 +25,10 @@ export default function Article() {
 
   return (
     <div className='space-y-2'>
-      <h1 className="scroll-m-20 text-5xl font-bold tracking-tight">Articles</h1>
+      <h1 className="scroll-m-20 text-5xl font-bold tracking-tight ml-5">Articles</h1>
 
       <section className='py-5 max-w-xl'>
-        <div className='py-2'>
+        <div className='py-2 px-5 hover:bg-accent rounded-md'>
           {articles.map(article => (
             <Link href={'/' + article.slug} passHref key={article.slug}>
               <div className='py-2 flex justify-between align-middle gap-2'>

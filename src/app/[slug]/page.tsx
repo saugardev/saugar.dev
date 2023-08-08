@@ -7,6 +7,15 @@ import { MDXRemote } from 'next-mdx-remote/rsc';
 import Button from '@/components/mdx/Button';
 import NotFound from '@/components/404';
 
+import remarkGfm from 'remark-gfm'
+
+const options = {
+  mdxOptions: {
+      remarkPlugins: [remarkGfm],
+      rehypePlugins: [],
+  }
+}
+
 export async function generateStaticParams() {
   const files = fs.readdirSync(path.join('src/mdx'));
 
@@ -36,7 +45,6 @@ function getArticle({ slug }: { slug: string }) {
   };
 }
 
-
 export async function generateMetadata({ params } : any) {
   const article = getArticle(params);
 
@@ -57,9 +65,8 @@ export default function Article({ params } :any) {
   }
 
   return (
-    <article className='prose prose-sm md:prose-base lg:prose-lg prose-slate !prose-invert mx-auto'>
-      <h1>{props.frontMatter.title}</h1>
-      <MDXRemote source={props.content} components={{Button}}/>
+    <article className='prose prose-sm md:prose-base lg:prose-lg dark:prose-invert prose-stone mx-auto'>
+      <MDXRemote source={props.content} components={{Button}} options={options}/>
     </article>
   )
 }
