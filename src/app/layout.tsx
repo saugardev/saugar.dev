@@ -18,7 +18,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={font.className}>
+      <body className={`${font.className} bg-background`}>
       <ThemeProvider attribute="class" defaultTheme="dark" enableSystem>
         <Navbar />
         <main className="px-6 py-24 lg:px-8">

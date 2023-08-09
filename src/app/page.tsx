@@ -29,7 +29,7 @@ export default function Article() {
       <section className='py-5 max-w-2xl'>
         <div className=''>
           {articles.map(article => (
-            <Link className='py-3 px-5 flex justify-between align-middle gap-2 hover:bg-accent dark:hover:text-primary rounded-md focus:bg-accent focus:outline-none focus-visible:outline-none' href={'/' + article.slug} passHref key={article.slug}>
+            <Link className='py-3 px-5 flex justify-between align-middle gap-2 hover:bg-accent dark:hover:text-primary rounded-md focus:bg-accent focus-visible:text-primary focus:outline-none focus-visible:outline-none' href={'/' + article.slug} passHref key={article.slug}>
               <div>
                 <h2 className="text-lg">{article.meta.title}</h2>
                 <p className="text-muted-foreground truncate w-64 lg:w-[34em]">{article.meta.description}</p>

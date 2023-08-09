@@ -47,7 +47,7 @@ export function Navbar() {
   }, []);
 
   return (
-    <div className="fixed right-0 flex items-center justify-end p-4">
+    <div className="w-full absolute flex items-center justify-end p-4">
       <NavigationMenu>
         <NavigationMenuList>
           {navigationItems.map((item, index) => (
