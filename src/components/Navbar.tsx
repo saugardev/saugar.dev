@@ -9,7 +9,7 @@ import {
   NavigationMenuList,
   navigationMenuTriggerStyle,
 } from "@/components/ui/navigation-menu"
-import { Toggle } from "@radix-ui/react-toggle";
+import { Toggle } from "@/components/ui/toggle"
 import { Moon, Sun } from "lucide-react";
 import { useTheme } from "next-themes";
 import { useEffect, useState } from "react";
@@ -53,7 +53,7 @@ export function Navbar() {
           {navigationItems.map((item, index) => (
             <NavigationMenuItem key={index}>
               <Link href={item.href} legacyBehavior passHref>
-                <NavigationMenuLink className={`${navigationMenuTriggerStyle()} cursor-pointer hover:text-primary`}>
+                <NavigationMenuLink className={`${navigationMenuTriggerStyle()} cursor-pointer dark:hover:text-primary dark:focus:text-primary`}>
                   <span className="text-lg">{item.label}</span>
                 </NavigationMenuLink>
               </Link>
@@ -61,7 +61,7 @@ export function Navbar() {
           ))}
         </NavigationMenuList>
       </NavigationMenu>
-      <Toggle className="flex items-center h-10 ml-1 p-4 rounded-md transition-colors hover:bg-accent focus:bg-accent focus:text-accent-foreground focus:outline-none disabled:pointer-events-none disabled:opacity-50 data-[active]:bg-accent/50 data-[state=open]:bg-accent/50" aria-label="Toggle color theme" onClick={toggleTheme}>
+      <Toggle className="flex items-center h-10 ml-1 p-4 rounded-md hover:bg-accent dark:hover:text-primary focus:bg-accent focus:text-primary focus:outline-none focus-visible:outline-none disabled:pointer-events-none disabled:opacity-50" aria-label="Toggle color theme" onClick={toggleTheme}>
         <Moon className="h-[1.5rem] w-[1.5rem] rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0" />
         <Sun className="absolute h-[1.5rem] w-[1.5rem] rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100" />
         <span className="sr-only">Toggle theme</span>
