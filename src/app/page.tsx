@@ -25,18 +25,18 @@ export default function Article() {
 
   return (
     <div className='space-y-2'>
-      <h1 className="scroll-m-20 text-5xl font-bold tracking-tight ml-5">Articles</h1>
+      <h1 className="scroll-m-20 text-5xl font-bold tracking-tight mx-5">Articles</h1>
 
-      <section className='py-5 max-w-xl'>
-        <div className='py-2 px-5 hover:bg-accent rounded-md'>
+      <section className='py-5 max-w-2xl'>
+        <div className=''>
           {articles.map(article => (
             <Link href={'/' + article.slug} passHref key={article.slug}>
-              <div className='py-2 flex justify-between align-middle gap-2'>
+              <div className='py-3 px-5 flex justify-between align-middle gap-2 hover:bg-accent rounded-md'>
                 <div>
-                  <h3 className="text-lg font-bold">{article.meta.title}</h3>
-                  <p className="text-gray-400 truncate w-52 lg:w-96">{article.meta.description}</p>
+                  <h2 className="text-lg">{article.meta.title}</h2>
+                  <p className="text-muted-foreground truncate w-52 lg:w-96">{article.meta.description}</p>
                 </div>
-                <div className="my-auto text-gray-400">
+                <div className="my-auto text-muted-foreground">
                   <p>{article.meta.date}</p>
                 </div>
               </div>
