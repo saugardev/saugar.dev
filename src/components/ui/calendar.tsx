@@ -21,7 +21,6 @@ function Calendar({
   return (
     <DayPicker
       onDayClick={(e: any) => {
-        console.log(e);
         onDaySelected?.(e);
       }}
       showOutsideDays={showOutsideDays}
@@ -49,8 +48,8 @@ function Calendar({
           "h-9 w-9 p-0 font-normal aria-selected:opacity-100"
         ),
         day_selected:
-          "bg-primary text-primary-foreground hover:bg-primary hover:text-primary-foreground focus:bg-primary focus:text-primary-foreground",
-        day_today: "bg-accent text-accent-foreground",
+          "bg-primary text-primary-foreground hover:bg-accent hover:text-primary focus:bg-primary focus:text-primary-foreground",
+        day_today: "bg-accent text-accent-foreground hover:text-primary",
         day_outside: "text-muted-foreground opacity-50",
         day_disabled: "text-muted-foreground opacity-50",
         day_range_middle:
