@@ -21,9 +21,17 @@ export default function Article() {
     };
   });
 
+  const datesWithUrls = articles.map((article) => {
+    const dateStr = article.meta.date;
+    const [day, month, year] = dateStr.split('-').map(Number);
+    const date = new Date(year, month - 1, day);
+    const url = '/' + article.slug;
+    return { date, url };
+  });
+
   return (
     <div className='relative flex flex-col lg:flex-row lg:justify-center space-y-2 lg:space-x-2'>
-      <div className='flex-grow'> {/* Content will take up available space */}
+      <div className='flex-grow'>
         <h1 className="scroll-m-20 text-5xl font-bold tracking-tight mx-5">Articles</h1>
         <section className='py-5 max-w-2xl'>
           <div>
@@ -42,7 +50,7 @@ export default function Article() {
         </section>
       </div>
       <aside className=' hidden lg:block'>
-        {/* <Calendar /> */}
+        <Calendar selectedDatesWithUrls={datesWithUrls}/>
       </aside>
     </div>
   )
