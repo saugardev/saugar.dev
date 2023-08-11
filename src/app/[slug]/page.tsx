@@ -17,11 +17,17 @@ const options = {
 }
 
 export async function generateStaticParams() {
-  const files = fs.readdirSync(path.join('src/mdx'));
+  const directoryPath = path.join('src', 'mdx');
+  const files = fs.readdirSync(directoryPath);
 
-  const paths = files.map(filename => ({
-    slug: filename.replace('.mdx', '')
-  }))
+  const paths = files
+    .filter((filename) => {
+      const filePath = path.join(directoryPath, filename);
+      return fs.statSync(filePath).isFile() && path.extname(filename) === '.mdx';
+    })
+    .map((filename) => ({
+      slug: filename.replace('.mdx', ''),
+    }));
 
   return paths;
 }
