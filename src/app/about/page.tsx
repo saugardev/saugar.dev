@@ -35,7 +35,7 @@ function Article() {
   const { meta, content } = article;
   
   return (
-    <article className='prose prose-md md:prose-base lg:prose-lg dark:prose-invert prose-stone lg:mx-0 mx-auto lg:px-5 p-0'>
+    <article className='prose prose-md lg:prose-lg dark:prose-invert prose-stone lg:mx-0 mx-auto lg:px-5 p-0'>
       <h1 className="scroll-m-20 text-5xl font-bold tracking-tight">{meta.title}</h1>
       <MDXRemote source={content} components={{Button}} options={options}/>
     </article>
