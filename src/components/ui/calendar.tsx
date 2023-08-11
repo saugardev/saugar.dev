@@ -1,6 +1,6 @@
 "use client"
 
-import * as React from "react"
+import React, { useEffect, useState} from "react"
 import { ChevronLeft, ChevronRight } from "lucide-react"
 import { DayPicker } from "react-day-picker"
 
@@ -18,8 +18,15 @@ function Calendar({
   showOutsideDays = true,
   ...props
 }: CalendarProps) {
+  const [today, setToday] = useState<Date>();
+
+  useEffect(() => {
+    setToday(new Date());
+  }, []);
+
   return (
     <DayPicker
+      today={today}
       onDayClick={(e: any) => {
         onDaySelected?.(e);
       }}
