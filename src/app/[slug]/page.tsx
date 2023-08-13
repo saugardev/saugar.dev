@@ -58,7 +58,7 @@ export async function generateMetadata({ params } : any) {
   return{
     title: article.frontMatter.title,
     description: article.frontMatter.description,
-    keywords: article.frontMatter.keywords,
+    keywords: article.frontMatter.keywords + ', saugardev, saul garcia cespedes',
     authors: [{name: 'Saul Garcia Cespedes', url: 'https://saugar.dev/about'}],
     applicationName: 'saugar.dev',
     openGraph: article.frontMatter.og ? {
