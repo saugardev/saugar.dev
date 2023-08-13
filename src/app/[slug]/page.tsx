@@ -58,6 +58,25 @@ export async function generateMetadata({ params } : any) {
   return{
     title: article.frontMatter.title,
     description: article.frontMatter.description,
+    keywords: article.frontMatter.keywords,
+    authors: [{name: 'Saul Garcia Cespedes', url: 'https://saugar.dev/about'}],
+    applicationName: 'saugar.dev',
+    openGraph: article.frontMatter.og ? {
+      title: article.frontMatter.title,
+      description: article.frontMatter.description,
+      url: 'https://saugar.dev',
+      siteName: 'Next.js',
+      images: [
+        {
+          url: `https://saugar.dev/${article.frontMatter.og}`,
+          width: 800,
+          height: 600,
+          alt: article.frontMatter.og_description
+        },
+      ],
+      locale: 'en_US',
+      type: 'website',
+    }: {}
   }
 }
 
