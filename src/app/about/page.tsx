@@ -6,6 +6,12 @@ import { MDXRemote } from 'next-mdx-remote/rsc';
 import Button from '@/components/mdx/Button';
 
 import remarkGfm from 'remark-gfm'
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Saul Garcia Cespedes - About Me',
+  description: 'Full Stack Developer specialized in Typescript, React, Node, PostgreSQL, Angular, Nest, Docker, and AWS',
+}
 
 const options = {
   mdxOptions: {

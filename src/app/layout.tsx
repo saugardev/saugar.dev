@@ -7,8 +7,8 @@ import { Navbar } from '@/components/Navbar'
 const font = Mukta({ weight: "400", subsets: ["latin"] })
 
 export const metadata: Metadata = {
-  title: 'Saul Garcia Cespedes',
-  description: 'Personal blog and portfolio website',
+  title: 'Saul Garcia Cespedes - Blog',
+  description: 'Saugar.dev is your gateway to the tech world and personal reflections. Dive into insightful posts on the latest technology trends, personal experiences, and unique thoughts that provoke curiosity and inspire growth. Explore now for a fresh perspective.',
 }
 
 export default function RootLayout({

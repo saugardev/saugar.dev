@@ -65,7 +65,7 @@ export async function generateMetadata({ params } : any) {
       title: article.frontMatter.title,
       description: article.frontMatter.description,
       url: 'https://saugar.dev',
-      siteName: 'Next.js',
+      siteName: 'saugar.dev',
       images: [
         {
           url: `https://saugar.dev/${article.frontMatter.og}`,
