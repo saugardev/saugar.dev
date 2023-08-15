@@ -68,7 +68,7 @@ export async function generateMetadata({ params } : any) {
       siteName: 'saugar.dev',
       images: [
         {
-          url: article.frontMatter.og ? `https://saugar.dev/${article.frontMatter.og}` : `https://saugar.dev/api/og${article.frontMatter.title}`,
+          url: article.frontMatter.og ? `https://saugar.dev/${article.frontMatter.og}` : `https://saugar.dev/api/og?title="${article.frontMatter.title}"`,
           width: 800,
           height: 600,
           alt: article.frontMatter.og_description
