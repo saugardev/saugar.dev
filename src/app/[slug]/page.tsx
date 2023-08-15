@@ -61,14 +61,14 @@ export async function generateMetadata({ params } : any) {
     keywords: article.frontMatter.keywords + ', saugardev, saul garcia cespedes',
     authors: [{name: 'Saul Garcia Cespedes', url: 'https://saugar.dev/about'}],
     applicationName: 'saugar.dev',
-    openGraph: article.frontMatter.og ? {
+    openGraph: {
       title: article.frontMatter.title,
       description: article.frontMatter.description,
       url: 'https://saugar.dev',
       siteName: 'saugar.dev',
       images: [
         {
-          url: `https://saugar.dev/${article.frontMatter.og}`,
+          url: article.frontMatter.og ? `https://saugar.dev/${article.frontMatter.og}` : `https://saugar.dev/api/og${article.frontMatter.title}`,
           width: 800,
           height: 600,
           alt: article.frontMatter.og_description
@@ -76,7 +76,7 @@ export async function generateMetadata({ params } : any) {
       ],
       locale: 'en_US',
       type: 'website',
-    }: {}
+    }
   }
 }
 
