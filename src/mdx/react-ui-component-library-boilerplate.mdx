@@ -1,0 +1,44 @@
+---
+title: Building an Opinionated React UI Components Library Boilerplate
+date: '21-08-2023'
+description: 'This technical article explores the process of building an opinionated React UI components library boilerplate. It takes a deep dive into the chosen technologies, including TypeScript, Storybook, Jest, Lerna, pnpm, Rollup, and GitHub Actions, elucidating why each was selected.'
+keywords: 'React UI components library, Boilerplate, TypeScript, Storybook, Jest, Lerna, pnpm, Rollup, GitHub Actions, Component Development, Monorepo Management, Module Bundling, Continuous Integration, Automated Testing, Opinionated Setup'
+og: 'articles/react-ui-component-library-boilerplate/ui-components.png'
+og_description: 'UI Components Example'
+---
+
+Building a library of UI components is an intricate process that requires thoughtful consideration of various aspects such as modularity, reusability, and performance. I have crafted a boilerplate that encapsulates the best practices for building a React UI components library.
+
+![UI Components Example](/articles/react-ui-component-library-boilerplate/ui-components.png)
+
+The link to the **GitHub repository** will be provided at the end of the article. I will take you through each technology and explain why I have chosen it:
+
+
+- [TypeScript](https://www.typescriptlang.org/) is a superset of JavaScript that adds static type definitions. Chosen for its ability to catch errors at compile-time, it makes writing robust applications easier. TypeScript's strong typing promotes readability and understanding, making the code self-documenting. Its type-checking capabilities enable smoother and more reliable code changes when refactoring.
+
+
+- [Storybook](https://storybook.js.org/) was selected as a playground for UI components, allowing developers to visualize how components render under different scenarios. It facilitates collaboration between designers and developers, leading to faster iterations and better alignment between design and implementation. Its ability to aid in testing the visual aspects of components and automatically generate documentation made it an optimal choice.
+
+
+- [Jest](https://jestjs.io/) was picked for its simplicity, excellent community support, and performance optimization features. Known for its ease of use, Jest's snapshot testing functionality enables developers to maintain consistency throughout the development cycle. Its fast-running tests and watch mode facilitate a more fluid development process, especially during iterative phases, making it the preferred choice.
+
+
+- [Lerna](https://lerna.js.org/) is a powerful tool chosen for its ability to manage JavaScript projects with multiple packages. It centralizes package management within monorepos and offers flexible versioning and release management. Chosen for promoting a cohesive versioning strategy, Lerna encourages code sharing across packages, enabling a more consistent and DRY codebase.
+
+
+- [pnpm](https://pnpm.io/) was selected for its efficiency in speed and its ability to conserve disk space by sharing downloaded packages between projects. Unlike traditional package managers, it enhances the security of the project by avoiding unnecessary dependencies, and its faster installation process ensures a smoother and more streamlined development workflow.
+
+
+- [Rollup](https://rollupjs.org/) was chosen for its ability to compile small pieces of code into larger, more complex structures. Its tree shaking feature eliminates dead code, resulting in lighter bundles, and its efficient build algorithms provide optimized output. Its extensive plugin system and support for code splitting offer the flexibility needed for customized builds tailored to specific project requirements.
+
+
+- [GitHub Actions](https://github.com/features/actions) was selected as a versatile automation tool that integrates seamlessly with GitHub repositories. Its ability to allow developers to write custom workflows using YAML syntax provides fine-tuned control over CI/CD processes. Whether it's code testing, deployment, or other routine tasks, GitHub Actions was chosen for its ease of automation, including a generous free tier for open-source projects.
+
+
+By carefully selecting TypeScript, Storybook, Jest, Lerna, pnpm, Rollup, and GitHub Actions for their respective strengths and advantages, this opinionated setup aims to provide developers with a simplified yet powerful starting point.
+
+If you're interested in diving into this setup, I invite you to explore the repository here: [UI Components Boilerplate](https://github.com/saugardev/ui-components-boilerplate).
+
+---
+
+Saul Garcia Cespedes. [Follow me on X (Twitter)](https://x.com/saugardev)
