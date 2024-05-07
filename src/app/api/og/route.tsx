@@ -1,4 +1,4 @@
-import { ImageResponse } from 'next/server';
+import { ImageResponse } from 'next/og';
 // App router includes @vercel/og.
 // No need to install it.
  
@@ -12,7 +12,7 @@ export async function GET(request: Request) {
   const fontData = await fetch(
     new URL('./Mukta-Regular.ttf', import.meta.url),
   ).then((res) => res.arrayBuffer());
- 
+
   return new ImageResponse(
     (
       <div
